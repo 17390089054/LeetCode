@@ -29,7 +29,8 @@ ListNode * createList(){
 
 //打印单链表
 void print(ListNode *head){
-    ListNode *p=head->next;
+    //ListNode *p=head->next;
+    ListNode *p=head;
     while(p!=NULL){
         cout<<p->val<<" ";
         p=p->next;
@@ -63,17 +64,17 @@ ListNode * reverseList2(ListNode *head){
         dummy->next=pCur;
         pCur=pNext;
     }
-    return dummy;
+    return dummy->next;
 }
 
 int main(){
 
     ListNode *head=createList();
     //打印创建的单链表
-    print(head);
+    print(head->next);
     //反转后
     cout<<"就地反转法:"<<endl;
-    ListNode *head1=reverseList2(head->next);
+    ListNode *head1=reverseList(head->next);
     print(head1);
     delete head,head1;
 
