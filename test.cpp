@@ -1,6 +1,7 @@
-#include <iostream>
-using namespace std;
-int main(){
-    cout<<"hello world!"<<endl;
+#include <stdio.h>
+int main()
+{
+    printf("hello VS Code!");
+    getchar();
     return 0;
 }
